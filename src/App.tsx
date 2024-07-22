@@ -1,17 +1,15 @@
-import React from 'react';
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
-import CheckoutForm from './components/CheckoutForm/CheckoutForm';
-
-// Replace with your own publishable key
-const stripePromise = loadStripe('your-publishable-key-here');
+import React from "react";
+import UserProfile from "./pages/userProfile";
 
 const App: React.FC = () => {
-  return (
-    <Elements stripe={stripePromise}>
-      <CheckoutForm />
-    </Elements>
-  );
-}
+  const user = {
+    email: "test6@mail.com",
+    name: "John Doe",
+    balance: 1000,
+    avatar: `${import.meta.env.VITE_PUBLIC_URL}/userIcon.svg`,
+  };
+
+  return <UserProfile userData={user} />;
+};
 
 export default App;
