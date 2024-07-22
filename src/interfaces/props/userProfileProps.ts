@@ -1,5 +1,5 @@
-import { IUsedData } from "../userData";
+import { IUserData } from "../userData";
 
 export interface IUserProfileProps {
-  userData: IUsedData;
+  userData: IUserData;
 }
