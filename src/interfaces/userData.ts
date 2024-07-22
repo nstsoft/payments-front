@@ -1,4 +1,4 @@
-export interface IUsedData {
+export interface IUserData {
   name: string;
   email: string;
   avatar: string;
