@@ -1,9 +1,9 @@
 import axios from "axios";
 
-export const payment = async (email: string) => {
+export const payment = async (amount: number) => {
   const response = await axios.post(
     `${import.meta.env.VITE_PUBLIC_URL}/payment/withdraw`,
-    { email },
+    { amount },
     {
       headers: {
         "Content-Type": "application/json",

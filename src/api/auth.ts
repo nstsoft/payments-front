@@ -3,7 +3,7 @@ import { IAuthResponse } from "../interfaces/authResponse";
 
 export const auth = async (email: string): Promise<IAuthResponse> => {
   const response = await axios.post(
-    `${import.meta.env.VITE_SERVER_URL}/auth`,
+    `${import.meta.env.VITE_SERVER_URL}/payment/account`,
     { email, country: "US", default_currency: "usd" },
     {
       headers: {
