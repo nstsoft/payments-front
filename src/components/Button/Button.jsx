@@ -1,6 +1,4 @@
-import { IButtonProps } from "../../interfaces/props/buttonProps";
-
-const Button = (props: IButtonProps) => {
+const Button = (props) => {
   return (
     <button className={props.className} onClick={props.onClick}>
       {props.children}
