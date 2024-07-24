@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import { IUserData } from "../interfaces";
 
-const fetchUserData = () => {
+const fetchUserData = (): Promise<IUserData> => {
   const userData = {
     email: "test6@mail.com",
     name: "John Doe",
@@ -12,7 +13,7 @@ const fetchUserData = () => {
 };
 
 export const useUser = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<IUserData | null>(null);
 
   useEffect(() => {
     if (!user) {

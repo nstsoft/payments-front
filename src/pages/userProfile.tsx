@@ -1,7 +1,8 @@
-import { authAPI } from "../api";
+import { auth } from "../api";
 import Button from "../components/Button/Button";
+import { IUserProfileProps } from "../interfaces";
 
-const UserProfile = (props) => {
+const UserProfile = (props: IUserProfileProps) => {
   const { userData } = props;
 
   const withdrawMethods = [
@@ -15,8 +16,8 @@ const UserProfile = (props) => {
     },
   ];
 
-  const createAccount = () => {
-    authAPI(userData.email)
+  const createAccount = (): void => {
+    auth(userData.email)
       .then((data) => {
         if (data) {
           window.open(data.link.url);
